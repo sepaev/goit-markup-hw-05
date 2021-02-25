@@ -56,6 +56,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+
   /* outline: 1px solid red; */
 }
 
@@ -80,7 +81,7 @@ p {
 
 a {
   text-decoration: none; /* Отменяю подчеркивание у ссылок */
-  background-color: transparent;
+  background: transparent;
 }
 
 img {
@@ -110,7 +111,7 @@ button {
   border: none;
   font: inherit;
   color: inherit;
-  background-color: transparent;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -194,6 +195,7 @@ button {
 .contact-link.map:hover,
 .contacts-header li:hover {
   color: var(--active-link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -247,7 +249,7 @@ footer .container {
 
 .social-button-footer {
   color: var(--social-passive-footer-color);
-  background-color: var(--social-background-footer-color);
+  background: var(--social-background-footer-color);
 }
 
 .social-container {
@@ -293,7 +295,7 @@ main {
 /* геройчик */
 .hero {
   padding: 200px;
-  background-color: #c4c4c4;
+  background: #c4c4c4;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -330,10 +332,13 @@ main {
   border-radius: 4px;
   width: 200px;
   margin: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover {
-  color: var(--black-color);
+  background: var(--white-color);
+  color: var(--active-link-color);
 }
 
 /* особенности */
@@ -351,11 +356,6 @@ main {
   border-radius: 4px;
   cursor: pointer;
 }
-
-/* .features-icon-container:hover { */
-/* background-color: var(--active-link-color); */
-/* color: white; */
-/* } */
 
 .features-icon {
   width: 70px;
@@ -408,6 +408,29 @@ main {
   display: inline-flex;
   line-height: 0;
   vertical-align: bottom;
+}
+
+.work-thumb {
+  position: relative;
+}
+
+.work-description {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  color: var(--white-color);
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .work-content li {
@@ -474,8 +497,8 @@ main {
 }
 
 .social-button {
-  color: var(--passive-background-color);
-  background-color: var(--social-background-main-color);
+  color: var(--passive-background);
+  background: var(--social-background-main-color);
 }
 
 .social-button,
@@ -490,12 +513,10 @@ main {
   align-items: flex-start;
   display: inline-block;
   text-align: center;
-}
+  color: var(--grey-color);
 
-.social-button:hover,
-.social-button-footer:hover {
-  background-color: var(--social-bg-active-color);
-  color: var(--social-active-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-icon {
@@ -504,6 +525,12 @@ main {
   fill: currentColor;
   text-align: center;
   margin: 12px;
+}
+
+.social-button:hover,
+.social-button-footer:hover {
+  color: var(--social-active-color);
+  background: var(--social-bg-active-color);
 }
 
 /* Постоянные клиенты */
@@ -551,6 +578,7 @@ main {
 
 .clients-item:hover {
   color: var(--active-link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 
@@ -577,6 +605,9 @@ main {
   padding: 6px 22px;
   font-family: inherit;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-thumb {
@@ -588,7 +619,7 @@ main {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: rgba(33, 150, 243, 0.9);
+  background: rgba(33, 150, 243, 0.9);
   width: 100%;
   min-height: 100%;
   font-size: 18px;
@@ -605,8 +636,8 @@ main {
 }
 
 .filters-button:hover {
-  background: var(--active-link-color);
   color: var(--white-color);
+  background: var(--active-link-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -641,6 +672,7 @@ main {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-heading {
@@ -683,8 +715,9 @@ main {
   display: block;
   width: 100%;
   text-align: center;
-  background-color: var(--white-color);
+  background: var(--white-color);
 }
+
 .contacts-section .section-title {
   padding-bottom: var(--standart-50px);
 }
