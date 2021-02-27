@@ -27,7 +27,6 @@
             <li><a class="nav-link" href="./contacts.html">Контакты</a></li>
           </ul>
         </nav>
-        <button class="button" data-toggle-online-sign>онлайн запись</button>
         <ul class="contacts-header">
           <li>
             <a
@@ -58,7 +57,9 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <a class="main-button" href=""><span>Заказать услугу</span></a>
+        <button class="main-button" data-modal-open href="">
+          <span>Заказать услугу</span>
+        </button>
       </section>
       <div class="container studio-container">
         <!--/* Особенности */-->
@@ -444,9 +445,17 @@
         >
       </div>
     </footer>
-    <div data-backdrop-sign class="backdrop-sign">
-      <div class="modal-sign">
-        <button data-toggle-backdrop-sign>Закрыть</button>
+
+    <!-- и на конец, ее величество М О Д А Л К А -->
+    <div data-modal class="backdrop is-hidden">
+      <div class="backdrop-modal">
+        <button data-modal-close>
+          <svg class="backdrop-modal-button-close">
+            <use href="./images/svg/sprite.svg#close-icon"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">ЗДЕСЬ</h2>
+        <span class="modal-text">может быть Ваша реклама</span>
       </div>
     </div>
 
