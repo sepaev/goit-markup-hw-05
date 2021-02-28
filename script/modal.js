@@ -27,5 +27,9 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
+
+    const isModalHidden = refs.modal.classList.contains('is-hidden');
+    const method = isModalHidden ? "enableBodyScroll" : "disableBodyScroll";
+    bodyScrollLock[method](refs.modal);
   }
 })();
