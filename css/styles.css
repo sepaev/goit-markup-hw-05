@@ -58,7 +58,7 @@ html {
 *::after {
   box-sizing: inherit;
 
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 ul,
@@ -319,6 +319,7 @@ main {
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  margin-bottom: var(--standart-50px);
 }
 
 /* геройчик */
@@ -370,7 +371,7 @@ main {
 }
 
 /* особенности */
-.studio-container {
+.section-studio {
   display: block;
 }
 
@@ -461,10 +462,6 @@ main {
   margin-bottom: auto;
 }
 
-.work-content li {
-  margin-top: var(--standart-50px);
-}
-
 .work-content li:not(:last-child) {
   margin-right: var(--standart-30px);
 }
@@ -493,19 +490,15 @@ main {
 }
 
 .team-item {
-  margin-top: var(--standart-50px);
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: calc((100%) / 4 - 90px / 4);
 }
 
 .team-item:not(:last-child) {
   margin-right: var(--standart-30px);
-}
-
-.team-thumb img {
-  width: 270px;
 }
 
 .team-content {
@@ -631,10 +624,10 @@ main {
 
 .filters {
   display: inline-flex;
+  margin-bottom: var(--standart-50px);
 }
 
 .filters-button {
-  margin: 0px 4px var(--standart-50px) 4px;
   background: var(--light-grey-color);
   color: var(--main-text-color);
   font-style: normal;
@@ -650,6 +643,14 @@ main {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filters li {
+  margin-right: 8px;
+}
+
+.filters li:last-child {
+  margin-right: 0px;
 }
 
 .portfolio-thumb {
