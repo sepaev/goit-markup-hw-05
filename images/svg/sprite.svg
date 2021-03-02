@@ -2,7 +2,7 @@
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <!-- close icon -->
-        <symbol id="close-icon" viewBox="0 0 31 31">
+        <symbol id="close-icon" viewBox="-1 -1 32 32">
 
             <circle cx="15" cy="15" r="15" stroke="#000" opacity="0.1" />
             <circle cx="15" cy="15" r="14.5" fill="#fff" />

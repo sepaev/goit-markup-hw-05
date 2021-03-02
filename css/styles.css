@@ -236,17 +236,20 @@ footer {
 
 footer .container {
   padding: 60px var(--standart-15px);
-  margin: 0px;
   display: flex;
   height: 100%;
   margin: auto;
   max-width: 1200px;
 }
 
+.contacts-container {
+  text-align: left;
+}
+
 .logo-link-footer {
   display: block;
   color: var(--white-color);
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   line-height: 1.19;
 }
 
@@ -801,6 +804,7 @@ main {
   width: 30px;
   height: 30px;
   fill: currentColor;
+  object-fit: fill;
 }
 
 /* временно для прикола */
