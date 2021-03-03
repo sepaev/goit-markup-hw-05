@@ -96,7 +96,7 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
-  max-width: 1600px;
+
   margin: auto;
   background: var(--main-background-color);
   text-align: center;
@@ -151,7 +151,7 @@ button {
   align-items: center;
   margin-bottom: 0px;
   padding: 24px var(--standart-15px) 25px;
-  max-width: 1200px;
+  width: auto;
   margin: auto;
 }
 
@@ -239,7 +239,7 @@ footer .container {
   display: flex;
   height: 100%;
   margin: auto;
-  max-width: 1200px;
+  width: auto;
 }
 
 .contacts-container {
@@ -333,7 +333,8 @@ main {
     ),
     url('../images/main-bg.jpg');
   background-size: contain, contain;
-  max-width: 100%;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .hero-title {
